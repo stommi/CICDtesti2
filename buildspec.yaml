@@ -4,9 +4,8 @@ env:
     variables:
 phases:
     install:
-        runtime-versions:
-            nodejs: 10
         commands:
+          - npm i npm@latest -g
     pre_build:
         commands:
             - npm install
@@ -20,3 +19,5 @@ phases:
 artifacts:
     files:
     - build/*
+    
+    
