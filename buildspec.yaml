@@ -4,7 +4,9 @@ env:
     variables:
 phases:
 	install:
-		commands:
+    runtime-versions:
+        nodejs: 10
+            commands:
 	pre_build:
 		commands:
 			- npm install
