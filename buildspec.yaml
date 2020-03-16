@@ -2,7 +2,6 @@ version: 0.2
 
 env:
     variables:
-phases:
 install:
     runtime-versions:
         nodejs: 10
