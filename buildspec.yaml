@@ -9,7 +9,8 @@ phases:
       - npm install
   build:
     commands:
-      - npm run build && - aws s3 sync build/ s3://tommibucket
+      - npm run build
   post_build:
         commands:
+      - aws s3 sync build/ s3://tommibucket
           
