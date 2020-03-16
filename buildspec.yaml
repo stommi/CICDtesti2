@@ -10,6 +10,6 @@ phases:
   build:
     commands:
       - npm run build
-      - aws s3 sync build/ s3://tommibucket
+      - aws s3 sync build/ s3://tommiharkkatehbuketti
   post_build:
         commands:
