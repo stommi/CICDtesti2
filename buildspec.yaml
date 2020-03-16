@@ -2,20 +2,21 @@ version: 0.2
 
 env:
     variables:
-install:
-    runtime-versions:
-        nodejs: 10
+phases:
+    install:
+        runtime-versions:
+            nodejs: 10
         commands:
-pre_build:
-commands:
-- npm install
-build:
-commands:
+    pre_build:
+        commands:
+            - npm install
+    build:
+        commands:
 - npm run build
-post_build:
-commands:
-- aws s3 sync build/ s3://tommibucket
-- echo "Build success!"
+    post_build:
+        commands:   
+            - aws s3 sync build/ s3://tommibucket
+        - echo "Build success!"
 artifacts:
-files:
-- build/*
+    files:
+    - build/*
